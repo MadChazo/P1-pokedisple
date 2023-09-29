@@ -1,5 +1,10 @@
-html {
-    background-image: url('https://images.unsplash.com/photo-1628968434441-d9c1c66dcde7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+
+html{
+    background-color: rgb(218, 241, 255);
+}
+
+hero{
+    opacity: 70%;
 }
 
 footer {
@@ -11,8 +16,7 @@ h1 {
     padding: 10px;
     text-align: center;
     color: rgb(255, 216, 42);
-    border-color: rgb(78, 116, 219);
-    text-shadow: 0 0 5px rgb(78, 116, 219);
+    text-shadow:4px 2px 3px rgb(78, 116, 219);
     font-size: 30px;
 }
 
@@ -32,14 +36,29 @@ button:hover{
     color: rgb(78, 116, 219);
     border: 20px rgb(78, 116, 219);
     text-shadow: 0 0 5px rgb(101, 132, 216);
-    box-shadow: 5px 5px rgb(101, 132, 216);
+    box-shadow: 5px 5px 4px rgb(101, 132, 216);
 }
 
 .container {
     font-family: 'Courier New', Courier, monospace;
-    color: rgb(209, 209, 209);
     width: 100%;
-    height: 100%;
+    height: max-content;
     padding: 5px;
+    display: flex;
+    align-items: center;
     text-align: center;
+    justify-content: center;
+    border: none;
+}
+form{
+    width: 600px;
+    height: 55px;
+    display: flex;
+    border: solid rgb(104, 135, 219);
+}
+form input{
+    flex: 1;
+    border: none;
+    letter-spacing: 1px;
+    padding: 10px 50px;
 }
