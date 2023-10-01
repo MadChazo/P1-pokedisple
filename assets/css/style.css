@@ -2,7 +2,7 @@ html {
   background-color: rgb(218, 241, 255);
 }
 
-hero {
+#hero {
   opacity: 70%;
 }
 
@@ -37,12 +37,12 @@ button {
   margin: 10px;
 }
 
-.btncontainer {
+.btnContainer {
   width: 75px;
   height: 75px;
 }
 
-#searchbtn {
+#searchBtn {
   width: 100%;
 }
 
@@ -53,7 +53,7 @@ button:hover {
   box-shadow: 5px 5px 4px rgb(101, 132, 216);
 }
 
-.search {
+#search {
   font-family: "Courier New", Courier, monospace;
   width: max-content;
   height: max-content;
