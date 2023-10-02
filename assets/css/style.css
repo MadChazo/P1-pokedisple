@@ -37,12 +37,12 @@ button {
   margin: 10px;
 }
 
-.btnContainer {
+#searchBtn {
   width: 75px;
   height: 75px;
 }
 
-#searchBtn {
+#btnBall {
   width: 100%;
 }
 
@@ -75,4 +75,8 @@ form input {
   border: none;
   letter-spacing: 1px;
   padding: 10px 50px;
+}
+
+#cards {
+    margin: 10px;
 }

@@ -16,11 +16,11 @@
       <button>Random</button>
     </header>
     <div id="search">
-      <form>
-        <input type="text" placeholder="What are you looking for?" />
+      <form id="searchForm">
+        <input type="text" placeholder="What are you looking for?" id="searchInput"/>
       </form>
-      <button type="submit" class="btnContainer">
-        <img src="assets/images/poke_button.png" id="searchBtn" />
+      <button type="submit" class="btnContainer" id="searchBtn">
+        <img src="assets/images/poke_button.png" id="btnBall" />
       </button>
     </div>
     <section id="hero">
@@ -30,7 +30,12 @@
         id="background"
       />
     </section>
-    <div id="cards"></div>
+    <div id="cards" class="columns">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
