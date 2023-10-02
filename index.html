@@ -3,28 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pok&eacute;Displ&eacute;</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/bulma.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="content">
-          <img src="assets/images/logo.png" alt="PokeDisple Logo" id = "logo">
-          <h1> Search for your favorite Pokemon! </h1>
-          <button> Home </button>
-          <button> Random </button>
-      </div>
+    <header>
+      <img src="assets/images/logo.png" alt="PokeDisple Logo" id="logo" />
+      <h1>Search for your favorite Pokemon!</h1>
+      <button>Home</button>
+      <button>Random</button>
     </header>
-    <div class= "search">
-      <form>
-        <input type="text" placeholder="What are you looking for?">
+    <div id="search">
+      <form id="searchForm">
+        <input type="text" placeholder="What are you looking for?" id="searchInput"/>
       </form>
-      <button type="submit" class ='btncontainer'><img src="assets/images/poke_button.png" id="searchbtn" /></button>
+      <button type="submit" class="btnContainer" id="searchBtn">
+        <img src="assets/images/poke_button.png" id="btnBall" />
+      </button>
     </div>
-    <hero>
-      <img src="https://images.unsplash.com/photo-1628968434441-d9c1c66dcde7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Background image of scattered Pokemon cards." id="background" />
-    </hero>
+    <section id="hero">
+      <img
+        src="assets/images/pokemon-cards-bg.jpg"
+        alt="Background image of scattered Pokemon cards."
+        id="background"
+      />
+    </section>
+    <div id="cards" class="columns">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
