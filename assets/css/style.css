@@ -2,17 +2,10 @@ html {
   background-color: rgb(218, 241, 255);
 }
 
-main {
-  position: relative;
-  background-image: url("../../assets/images/pokemon-cards-bg.jpg");
-  background-repeat:repeat-y;
-  background-size:contain;
-}
-
-#background {
-  position:absolute;
-  width: 100%;
-  opacity: 70%;
+nav {
+  border-bottom: solid black;
+  background-color: #80CFFF;
+  padding: 10px;
 }
 
 header {
@@ -81,6 +74,19 @@ form input {
   border: none;
   letter-spacing: 1px;
   padding: 10px 50px;
+}
+
+main {
+  position: relative;
+  background-image: url("../../assets/images/pokemon-cards-bg.jpg");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  opacity: 70%;
 }
 
 #cards {
