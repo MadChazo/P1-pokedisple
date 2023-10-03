@@ -11,31 +11,36 @@
   <body>
     <header>
       <img src="assets/images/logo.png" alt="PokeDisple Logo" id="logo" />
-      <h1>Search for your favorite Pokemon!</h1>
+      <h1>Search for cards of your favorite Pokemon!</h1>
       <button>Home</button>
       <button>Random</button>
     </header>
     <div id="search">
       <form id="searchForm">
-        <input type="text" placeholder="What are you looking for?" id="searchInput"/>
+        <input
+          type="text"
+          placeholder="What are you looking for?"
+          id="searchInput"
+        />
       </form>
       <button type="submit" class="btnContainer" id="searchBtn">
         <img src="assets/images/poke_button.png" id="btnBall" />
       </button>
     </div>
-    <section id="hero">
+
+    <main>
       <img
         src="assets/images/pokemon-cards-bg.jpg"
         alt="Background image of scattered Pokemon cards."
         id="background"
       />
-    </section>
-    <div id="cards" class="columns">
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-    </div>
+      <div id="cards" class="columns">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </main>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
