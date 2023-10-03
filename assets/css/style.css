@@ -2,12 +2,17 @@ html {
   background-color: rgb(218, 241, 255);
 }
 
-#hero {
-  opacity: 70%;
+main {
+  position: relative;
+  background-image: url("../../assets/images/pokemon-cards-bg.jpg");
+  background-repeat:repeat-y;
+  background-size:contain;
 }
 
 #background {
+  position:absolute;
   width: 100%;
+  opacity: 70%;
 }
 
 header {
@@ -16,6 +21,7 @@ header {
   margin: 0 auto;
   width: max-content;
 }
+
 h1 {
   font-family: "Courier New", Courier, monospace;
   padding: 10px;
@@ -78,5 +84,5 @@ form input {
 }
 
 #cards {
-    margin: 10px;
+  margin: 10px;
 }
