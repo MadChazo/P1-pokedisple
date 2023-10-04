@@ -4,12 +4,12 @@ html {
 
 nav {
   border-bottom: solid black;
-  background-color: #80CFFF;
+  background-color: #80cfff;
   padding: 10px;
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index:1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 header {
@@ -63,6 +63,7 @@ button:hover {
   height: max-content;
   padding: 5px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -81,6 +82,16 @@ form input {
   padding: 10px 50px;
 }
 
+#loading {
+  display: none;
+  width: 100%;
+}
+
+#noneFound {
+  display: none;
+  width: 100%;
+}
+
 main {
   position: relative;
   background-image: url("../../assets/images/pokemon-cards-bg.jpg");
@@ -89,7 +100,7 @@ main {
 }
 
 #background {
-  position: absolute;
+  position: static;
   width: 100%;
   opacity: 70%;
 }
@@ -98,12 +109,32 @@ main {
   margin: 10px;
 }
 
+.pokeCard {
+  position: relative;
+}
+
+.favoriteBtn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 36px;
+  color: white;
+}
+
+.favoriteBtn:hover {
+  top: 15px;
+  left: 15px;
+  font-size: 48px;
+  cursor: pointer;
+}
+
 footer {
   border-top: solid black;
-  background-color: #80CFFF;
+  background-color: #80cfff;
   padding: 10px;
-  position:fixed;
-  width:100%;
-  bottom:0;
-  z-index:1;
+  position: static;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
 }
