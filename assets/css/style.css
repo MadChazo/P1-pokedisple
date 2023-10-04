@@ -29,6 +29,28 @@ h1 {
   font-size: 30px;
 }
 
+p:before{
+  content: attr();
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: gold;
+  overflow: hidden;
+  border-bottom: 16px solid gold;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate
+{
+   0%
+   {
+   width: 0;
+   }
+   100%
+   {
+   width: 0;
+   }
+}
 button {
   font-family: "Courier New", Courier, monospace;
   color: black;
@@ -96,6 +118,13 @@ main {
 
 #cards {
   margin: 10px;
+}
+
+.pokeCard{
+  border-radius: 15px;
+}
+.pokeCard:hover{
+  box-shadow: inset 0px 0px 50px black;
 }
 
 footer {
