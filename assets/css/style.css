@@ -6,12 +6,17 @@ nav {
   border-bottom: solid black;
   background-color: #80CFFF;
   padding: 10px;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1;
 }
 
 header {
   text-align: center;
   padding: 40px 0px 10px 0px;
   margin: 0 auto;
+  margin-top: 100px;
   width: max-content;
 }
 
@@ -91,4 +96,14 @@ main {
 
 #cards {
   margin: 10px;
+}
+
+footer {
+  border-top: solid black;
+  background-color: #80CFFF;
+  padding: 10px;
+  position:fixed;
+  width:100%;
+  bottom:0;
+  z-index:1;
 }
