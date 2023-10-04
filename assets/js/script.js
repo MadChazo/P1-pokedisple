@@ -12,7 +12,9 @@ var searchBtn = document.getElementById("searchBtn");
 var searchInput = document.getElementById("searchInput");
 var searchForm = document.getElementById("searchForm");
 var loadingText = document.getElementById("loading");
+var noneFoundText = document.getElementById("noneFound");
 var spriteEl = document.getElementById("sprite");
+var background = document.getElementById("background");
 
 // Fetches sprite of searched pokemon and displays on page
 function findSprite(name) {
@@ -28,19 +30,42 @@ function findSprite(name) {
     .then(function (data) {
       if (data) {
         var spriteURL = data.sprites.front_default;
-        var spriteName = data.name;
         var foundSprite = document.createElement("img");
         foundSprite.src = spriteURL;
-        var foundName = document.createElement("figcaption");
-        foundName.textContent = spriteName;
         spriteEl.appendChild(foundSprite);
-        spriteEl.appendChild(foundName);
       }
     });
 }
 
+function faveHandler(event) {
+  console.log(event);
+}
+
+function showFave(event) {
+  if (event.target.children[1]) {
+    event.target.children[1].setAttribute("style", "display: inline");
+  } else {
+    event.target.parentElement.children[1].setAttribute(
+      "style",
+      "display: inline"
+    );
+  }
+}
+
+function hideFave(event) {
+  if (event.target.children[1]) {
+    event.target.children[1].setAttribute("style", "display: none");
+  } else {
+    event.target.parentElement.children[1].setAttribute(
+      "style",
+      "display: none"
+    );
+  }
+}
+
 // Fetches all card images of that pokemon
 function searchHandler() {
+  noneFoundText.setAttribute("style", "display: none")
   var pokeName = searchInput.value;
   if (pokeName == "") {
     return;
@@ -64,21 +89,34 @@ function searchHandler() {
       if (!pokeList[0]) {
         var missingSprite = document.createElement("img");
         missingSprite.src = "assets/images/MissingNo.png";
-        var noneFound = document.createElement("figcaption");
-        noneFound.textContent = "No cards found";
         spriteEl.appendChild(missingSprite);
-        spriteEl.appendChild(noneFound);
         loadingText.setAttribute("style", "display: none");
+        noneFoundText.setAttribute("style", "display: block")
+        background.setAttribute("style", "display: block");
         return;
       }
       for (let i = 0; i < pokeList.length; i++) {
-        console.log(pokeList[i].images.large)
+        console.log(pokeList[i].images.large);
         var columnNum = i % 4;
         var newCard = document.createElement("figure");
         newCard.classList.add("image", "is-3by4", "pokeCard");
-        newCard.innerHTML = '<img src="' + pokeList[i].images.large + '" />';
+        newCard.innerHTML =
+          '<img src="' +
+          pokeList[i].images.large +
+          '" /><span class="favoriteBtn">❤</span>';
         columns[columnNum].appendChild(newCard);
       }
+      var cardImages = document.getElementsByClassName("pokeCard");
+      var faves = document.getElementsByClassName("favoriteBtn");
+      for (let i = 0; i < cardImages.length; i++) {
+        cardImages[i].addEventListener("mouseover", showFave);
+        cardImages[i].addEventListener("mouseout", hideFave);
+      }
+
+      for (let i = 0; i < faves.length; i++) {
+        faves[i].addEventListener("click", faveHandler);
+      }
+      background.setAttribute("style", "display: none");
       loadingText.setAttribute("style", "display: none");
     })
     .then(findSprite(pokeName));
