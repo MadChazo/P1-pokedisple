@@ -6,9 +6,14 @@
     <title>Pok&eacute;Displ&eacute; - Random Card</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/bulma.css" />
-    <link rel="stylesheet" href="assets/css/random.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <nav>
+      <button>Home</button>
+      <a href="random.html"><button>Random</button></a
+      ><a href="favorite.html"><button>Your Favorites</button></a>
+    </nav>
     <header>
       <img src="assets/images/logo.png" alt="PokeDisple Logo" id="logo" />
       <h1>Search for your favorite Pokemon!</h1>
@@ -16,10 +21,12 @@
       <button id="randBtn">Random</button>
     </header>
     <main>
-        <p id="loading">Loading Random Pok&eacute;mon...</p>
-        <h2 id="randName"></h2>
+      <p id="loading">Loading Random Pok&eacute;mon...</p>
+      <article id="randDisplay">
+        <h2 id="randName" class ="randTxt"></h2>
         <figure id="randImg" class="image is-3by4"></figure>
-        <ul id="randData"></ul>
+        <ul id="randData" class="randTxt"></ul>
+      </article>
     </main>
     <script src="assets/js/random.js"></script>
   </body>
