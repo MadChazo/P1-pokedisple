@@ -3,38 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pok&eacute;Displ&eacute;</title>
+    <title>Your Favorites</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/bulma.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
     <nav>
-      <button>Home</button>
-      <a href="random.html"
-        ><button>Random</button></a
-        ><a href="favorite.html"><button>Your Favorites</button></a>
+      <a href="index.html"><button>Home</button></a>
+      <a href="random.html"><button>Random</button></a
+      ><button>Your Favorites</button>
     </nav>
     <header>
       <img src="assets/images/logo.png" alt="PokeDisple Logo" id="logo" />
       <h1>Search for cards of your favorite Pokemon!</h1>
     </header>
-    <div id="search">
-      <figure id="sprite"></figure>
-      <form id="searchForm">
-        <input
-          type="text"
-          placeholder="What are you looking for?"
-          id="searchInput"
-        />
-      </form>
-      <button type="submit" class="btnContainer" id="searchBtn">
-        <img src="assets/images/poke_button.png" id="btnBall" />
-      </button>
-      <br />
-      <p id="loading">Searching the tall grass...</p>
-      <p id="noneFound">No cards found.</p>
-    </div>
     <main>
       <img
         src="assets/images/pokemon-cards-bg.jpg"
@@ -52,6 +36,6 @@
       This website is not produced, endorsed, supported, or affiliated with
       Nintendo or The Pokémon Company.
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/favorite.js"></script>
   </body>
 </html>
