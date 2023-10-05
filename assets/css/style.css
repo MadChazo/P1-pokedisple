@@ -2,21 +2,23 @@ html {
   background-color: rgb(218, 241, 255);
 }
 
-nav {
-  border-bottom: solid black;
-  background-color: #80cfff;
-  padding: 10px;
-  position: fixed;
+main {
+  position: relative;
+  background-image: url("../../assets/images/pokemon-cards-bg.jpg");
+  background-repeat:repeat-y;
+  background-size:contain;
+}
+
+#background {
+  position:absolute;
   width: 100%;
-  top: 0;
-  z-index: 1;
+  opacity: 70%;
 }
 
 header {
   text-align: center;
   padding: 40px 0px 10px 0px;
   margin: 0 auto;
-  margin-top: 100px;
   width: max-content;
 }
 
@@ -29,28 +31,6 @@ h1 {
   font-size: 30px;
 }
 
-p:before{
-  content: attr();
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: gold;
-  overflow: hidden;
-  border-bottom: 16px solid gold;
-  animation: animate 10s linear infinite;
-}
-@keyframes animate
-{
-   0%
-   {
-   width: 0;
-   }
-   100%
-   {
-   width: 0;
-   }
-}
 button {
   font-family: "Courier New", Courier, monospace;
   color: black;
@@ -85,7 +65,6 @@ button:hover {
   height: max-content;
   padding: 5px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -104,66 +83,10 @@ form input {
   padding: 10px 50px;
 }
 
-#loading {
-  display: none;
-  width: 100%;
-}
-
-#noneFound {
-  display: none;
-  width: 100%;
-}
-
-main {
-  position: relative;
-  background-image: url("../../assets/images/pokemon-cards-bg.jpg");
-  background-repeat: repeat-y;
-  background-size: contain;
-}
-
-#background {
-  position: static;
-  width: 100%;
-  opacity: 70%;
-}
-
 #cards {
   margin: 10px;
 }
 
-.pokeCard {
-  position: relative;
-}
-
-.favoriteBtn {
-  display: none;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 36px;
-  color: white;
-}
-
-.favoriteBtn:hover {
-  top: 15px;
-  left: 15px;
-  font-size: 48px;
-  cursor: pointer;
-}
-
-.pokeCard{
-  border-radius: 15px;
-}
-.pokeCard:hover{
-  box-shadow: inset 0px 0px 50px black;
-}
-
-footer {
-  border-top: solid black;
-  background-color: #80cfff;
-  padding: 10px;
-  position: static;
-  width: 100%;
-  bottom: 0;
-  z-index: 1;
+.pokeCard :hover{
+    opacity: 95%;
 }
