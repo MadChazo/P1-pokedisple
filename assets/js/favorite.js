@@ -36,6 +36,7 @@ function removeFave() {
   localStorage.setItem('favorites', newFilteredGalleryString)
   unFavCard = this.parentNode;
   unFavCard.remove()
+  location.reload()
 }
 
 function displayFav() {
