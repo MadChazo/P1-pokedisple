@@ -27,6 +27,7 @@ h1 {
   color: rgb(255, 216, 42);
   text-shadow: 4px 2px 3px rgb(78, 116, 219);
   font-size: 30px;
+  font-weight: bold;
 }
 
 p:before{

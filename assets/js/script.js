@@ -119,11 +119,9 @@ function searchHandler() {
         cardImages[i].addEventListener("mouseover", showFave);
         cardImages[i].addEventListener("mouseout", hideFave);
       }
-
       for (let i = 0; i < faves.length; i++) {
         faves[i].addEventListener("click", faveHandler);
       }
-      background.setAttribute("style", "display: none");
       loadingText.setAttribute("style", "display: none");
     })
     .then(findSprite(pokeName));

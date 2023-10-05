@@ -6,14 +6,6 @@ var randImg = document.getElementById("randImg");
 var randData = document.getElementById("randData");
 var loadText = document.getElementById("loading")
 
-function sendHome() {
-  window.location = "index.html";
-}
-
-function sendRandom() {
-  window.location = "random.html";
-}
-
 function printRandCard(card) {
   loadText.setAttribute("style", "display:none")
   randName.textContent = card.name;
@@ -56,7 +48,3 @@ function getRandCard() {
     });
 }
 getRandCard();
-
-// Event listeners
-homeBtn.addEventListener("click", sendHome);
-randBtn.addEventListener("click", sendRandom);
