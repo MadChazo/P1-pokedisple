@@ -15,6 +15,8 @@ var loadingText = document.getElementById("loading");
 var noneFoundText = document.getElementById("noneFound");
 var spriteEl = document.getElementById("sprite");
 var background = document.getElementById("background");
+let favList = []
+
 
 // Fetches sprite of searched pokemon and displays on page
 function findSprite(name) {
@@ -39,6 +41,11 @@ function findSprite(name) {
 
 function faveHandler(event) {
   console.log(event);
+  console.log(this.previousElementSibling.src)
+  let targetFavLink = this.previousElementSibling.src;
+  favList.push(targetFavLink)
+  savedFav = JSON.stringify(favList);
+  localStorage.setItem('favorites', savedFav)
 }
 
 function showFave(event) {
