@@ -15,6 +15,7 @@ var loadingText = document.getElementById("loading");
 var noneFoundText = document.getElementById("noneFound");
 var spriteEl = document.getElementById("sprite");
 var background = document.getElementById("background");
+let cardDisplay = document.getElementById('cards')
 let favList = []
 
 
@@ -73,6 +74,7 @@ function hideFave(event) {
 // Fetches all card images of that pokemon
 function searchHandler() {
   noneFoundText.setAttribute("style", "display: none")
+  cardDisplay.classList.remove('custCol')
   var pokeName = searchInput.value;
   if (pokeName == "") {
     return;
