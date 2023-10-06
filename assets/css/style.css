@@ -1,5 +1,6 @@
 html {
   background-color: rgb(218, 241, 255);
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 nav {
@@ -21,7 +22,7 @@ header {
 }
 
 h1 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Bebas Neue', sans-serif;
   padding: 10px;
   text-align: center;
   color: rgb(255, 216, 42);
@@ -31,7 +32,7 @@ h1 {
   text-wrap: wrap;
 }
 
-p:before{
+#search:before{
   content: attr();
   position: absolute;
   top: 0;
@@ -53,8 +54,9 @@ p:before{
    width: 0;
    }
 }
+
 button {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Bebas Neue', sans-serif;
   color: black;
   font-weight: 500px;
   background-color: rgb(255, 216, 42);
@@ -82,7 +84,7 @@ button:hover {
 }
 
 #search {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Bebas Neue', sans-serif;
   width: max-content;
   height: max-content;
   padding: 5px;
@@ -92,12 +94,13 @@ button:hover {
   text-align: center;
   justify-content: center;
   margin: 0 auto;
+  color: rgb(103, 165, 228);
 }
 form {
   width: 600px;
   height: 55px;
   display: flex;
-  border: solid rgb(104, 135, 219);
+  border: solid rgb(111, 144, 235);
 }
 form input {
   flex: 1;
