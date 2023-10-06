@@ -29,10 +29,11 @@ h1 {
   padding: 10px;
   text-align: center;
   color: rgb(255, 216, 42);
-  text-shadow: 4px 2px 3px rgb(78, 116, 219);
-  font-size: 30px;
+  text-shadow: 4px 2px 3px rgb(132, 156, 223);
+  font-size: 35px;
   font-weight: bold;
   text-wrap: wrap;
+  letter-spacing: 4px;
 }
 
 #search:before{
@@ -61,11 +62,12 @@ h1 {
 button {
   font-family: 'Bebas Neue', sans-serif;
   color: black;
+  font-size: 23px;
   font-weight: 500px;
   background-color: rgb(255, 216, 42);
-  border: solid black 1px;
+  border: none;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 30px;
   text-align: center;
   margin: 10px;
 }
@@ -81,8 +83,8 @@ button {
 
 button:hover {
   color: rgb(78, 116, 219);
-  border: 20px rgb(78, 116, 219);
-  text-shadow: 0 0 5px rgb(101, 132, 216);
+  border: 20px rgb(255, 192, 56);
+  text-shadow: 0 0 5px rgb(181, 213, 255);
   box-shadow: 5px 5px 4px rgb(101, 132, 216);
 }
 
