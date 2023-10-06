@@ -203,3 +203,20 @@ footer {
     width: 75%;
   }
 }
+
+#end{
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 10px;
+  text-align: center;
+  color: rgb(255, 216, 42);
+  text-shadow: 4px 2px 3px rgb(132, 156, 223);
+  font-size: 35px;
+  font-weight: bold;
+  text-wrap: wrap;
+  letter-spacing: 4px; 
+}
+
+#endPikachu{
+  width: 100px;
+  margin: auto;
+}
