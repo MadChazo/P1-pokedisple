@@ -1,11 +1,15 @@
 var columns = document.getElementsByClassName("column");
 let favGalleryString = localStorage.getItem("favorites");
+let cardDisplay = document.getElementById("cards");
 let favGallery = JSON.parse(favGalleryString);
 let filteredGallery = favGallery.filter((value, index, self) => {
   return self.indexOf(value) === index;
 });
 filteredGalleryString = JSON.stringify(filteredGallery);
 localStorage.setItem("favorites", filteredGalleryString);
+if (filteredGallery.length > 0) {
+  cardDisplay.classList.remove("custCol");
+}
 
 function showFave(event) {
   if (event.target.children[1]) {
@@ -30,16 +34,17 @@ function hideFave(event) {
 }
 
 function removeFave() {
-  let targetFavLink = this.previousElementSibling.src
-  newFilteredGallery = filteredGallery.filter(item=> item !== targetFavLink)
-  newFilteredGalleryString = JSON.stringify(newFilteredGallery)
-  localStorage.setItem('favorites', newFilteredGalleryString)
+  let targetFavLink = this.previousElementSibling.src;
+  newFilteredGallery = filteredGallery.filter((item) => item !== targetFavLink);
+  newFilteredGalleryString = JSON.stringify(newFilteredGallery);
+  localStorage.setItem("favorites", newFilteredGalleryString);
   unFavCard = this.parentNode;
-  unFavCard.remove()
-  location.reload()
+  unFavCard.remove();
+  location.reload();
 }
 
 function displayFav() {
+
   for (let i = 0; i < filteredGallery.length; i++) {
     var columnNum = i % 4;
     var newCard = document.createElement("figure");
@@ -55,8 +60,8 @@ function displayFav() {
       cardImages[i].addEventListener("mouseover", showFave);
       cardImages[i].addEventListener("mouseout", hideFave);
     }
-    for (let i = 0; i<faves.length;i++) {
-      faves[i].addEventListener('click', removeFave)
+    for (let i = 0; i < faves.length; i++) {
+      faves[i].addEventListener("click", removeFave);
     }
   }
 }
