@@ -11,7 +11,8 @@ N/A
 ## Usage
 
 Visit the website at https://madchazo.github.io/P1-pokedisple/.
-There are three pages to the site: Home, Random, and Favorites. The random page will show you a card from a random Pokémon and give you some information about it, including the average Cardmarket sell price. The favorites page will display a list of your favorite cards as selected using the search function on the homepage. The homepage allows you to search and displays a list of card images of the results - as well as a sprite if your search matches the name of a Pokémon
+![screenshot of PokéDisplé homepage](assets/images/P1-Screenshot.png)
+There are three pages to the site: Home, Random, and Favorites. The random page will show you a card from a random Pokémon and give you some information about it, including the average Cardmarket sell price. (You may also see an Easter egg or two if you're lucky!) The favorites page will display a list of your favorite cards as selected using the search function on the homepage. The homepage allows you to search and displays a list of card images of the results - as well as a sprite if your search matches the name of a Pokémon.
 
 ### Search instructions
 
@@ -19,13 +20,15 @@ Unfortunately, due to the limitations of the APIs we used, you cannot search for
 
 You may, however, search part of a name and find all Pokémon with that part in their name using an asterisk (\*). For example, searching "Char\*" will pull up cards for "Charmander," "Charmeleon," and "Charizard," and searching "\*chu" will pull up cards for "Pichu," "Pikachu," and "Raichu."
 
+The search function will pull up a maximum of 250 cards. 
+
 ## Credits
 
 The creators of this project are:
 
-Madison: https://github.com/MadChazo
-
 J: https://github.com/ChasingGatsby
+
+Madison: https://github.com/MadChazo
 
 Ava: https://github.com/afj511
 
