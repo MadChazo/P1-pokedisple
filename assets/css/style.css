@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Young+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Young+Serif&display=swap");
 
+/* Global styling */
 html {
   background-color: rgb(218, 241, 255);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-
+/* Header section styling */
 nav {
   border-bottom: solid black;
   background-color: #80cfff;
@@ -21,11 +22,10 @@ header {
   padding: 40px 0px 10px 0px;
   margin: 0 auto;
   margin-top: 100px;
-
 }
 
 h1 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   padding: 10px;
   text-align: center;
   color: rgb(255, 216, 42);
@@ -36,31 +36,8 @@ h1 {
   letter-spacing: 4px;
 }
 
-#search:before{
-  content: attr();
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: gold;
-  overflow: hidden;
-  border-bottom: 16px solid gold;
-  animation: animate 10s linear infinite;
-}
-@keyframes animate
-{
-   0%
-   {
-   width: 0;
-   }
-   100%
-   {
-   width: 0;
-   }
-}
-
 button {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: black;
   font-size: 23px;
   font-weight: 500px;
@@ -89,7 +66,7 @@ button:hover {
 }
 
 #search {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   width: max-content;
   height: max-content;
   padding: 5px;
@@ -101,12 +78,14 @@ button:hover {
   margin: 0 auto;
   color: rgb(103, 165, 228);
 }
+
 form {
   width: 600px;
   height: 55px;
   display: flex;
   border: solid rgb(111, 144, 235);
 }
+
 form input {
   flex: 1;
   border: none;
@@ -121,9 +100,10 @@ form input {
 
 #noneFound {
   display: none;
-  width: 100%;
+  width: 100%
 }
 
+/* Cards section styling */
 main {
   position: relative;
   background-image: url("../../assets/images/pokemon-cards-bg.jpg");
@@ -145,6 +125,7 @@ main {
   left: 20px;
   font-size: 36px;
   color: white;
+  text-shadow:rgb(78, 116, 219) 1px 1px 9px;
 }
 
 .favoriteBtn:hover {
@@ -154,13 +135,11 @@ main {
   cursor: pointer;
 }
 
-.pokeCard{
-  border-radius: 15px;
-}
-.pokeCard:hover{
-  box-shadow: inset 0px 0px 50px black;
+.custCol {
+  height: 500px;
 }
 
+/* End and footer section styling */
 footer {
   border-top: solid black;
   background-color: #80cfff;
@@ -172,18 +151,37 @@ footer {
   text-align: center;
 }
 
+
+#end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#end-text {
+  font-family: "Bebas Neue", sans-serif;
+  padding: 15px;
+  color: rgb(255, 216, 42);
+  text-shadow: 4px 2px 3px rgb(132, 156, 223);
+  font-size: 35px;
+  font-weight: bold;
+  text-wrap: wrap;
+  letter-spacing: 4px;
+}
+
+#endPikachu {
+  width: 100px;
+}
+
+/* Random page specific styling */
 #randDisplay {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-#randImg {
-  width:max-content;
-}
-
 .randTxt {
-  background-color: #80cfff;;
+  background-color: #80cfff;
   width: 100%;
   padding: 10px;
   margin: 0 auto;
@@ -191,35 +189,15 @@ footer {
   font-weight: bold;
 }
 
-#randName{
+#randName {
   font-size: 30px;
   width: 100%;
   text-align: center;
 }
 
-.custCol {
-  height:500px;
-}
-
+/* Media query for smaller devices */
 @media (max-width: 768px) {
-  form{
+  form {
     width: 75%;
   }
-}
-
-#end{
-  font-family: 'Bebas Neue', sans-serif;
-  padding: 10px;
-  text-align: center;
-  color: rgb(255, 216, 42);
-  text-shadow: 4px 2px 3px rgb(132, 156, 223);
-  font-size: 35px;
-  font-weight: bold;
-  text-wrap: wrap;
-  letter-spacing: 4px; 
-}
-
-#endPikachu{
-  width: 100px;
-  margin: auto;
 }

@@ -40,6 +40,7 @@ function findSprite(name) {
     });
 }
 
+// Adds card to favorite list
 function faveHandler(event) {
   console.log(event);
   console.log(this.previousElementSibling.src)
@@ -49,6 +50,7 @@ function faveHandler(event) {
   localStorage.setItem('favorites', savedFav)
 }
 
+// Shows favorite button on mouseover of card
 function showFave(event) {
   if (event.target.children[1]) {
     event.target.children[1].setAttribute("style", "display: inline");
@@ -60,6 +62,7 @@ function showFave(event) {
   }
 }
 
+// Hides favorite button on mouseout of card
 function hideFave(event) {
   if (event.target.children[1]) {
     event.target.children[1].setAttribute("style", "display: none");
@@ -74,7 +77,6 @@ function hideFave(event) {
 // Fetches all card images of that pokemon
 function searchHandler() {
   noneFoundText.setAttribute("style", "display: none")
-  cardDisplay.classList.remove('custCol')
   var pokeName = searchInput.value;
   if (pokeName == "") {
     return;
@@ -95,7 +97,7 @@ function searchHandler() {
     .then(function (data) {
       var pokeList = data.data;
       console.log(pokeList);
-      if (!pokeList[0]) {
+      if (!pokeList[0]) { // If no cards found
         var missingSprite = document.createElement("img");
         missingSprite.src = "assets/images/MissingNo.png";
         spriteEl.appendChild(missingSprite);
@@ -104,6 +106,8 @@ function searchHandler() {
         background.setAttribute("style", "display: block");
         return;
       }
+      cardDisplay.classList.remove('custCol') // Removes height limit on card section
+      // Creates and displays cards
       for (let i = 0; i < pokeList.length; i++) {
         console.log(pokeList[i].images.large);
         var columnNum = i % 4;
@@ -115,6 +119,7 @@ function searchHandler() {
           '" /><span class="favoriteBtn">❤</span>';
         columns[columnNum].appendChild(newCard);
       }
+      // Adds favorite functionality listeners
       var cardImages = document.getElementsByClassName("pokeCard");
       var faves = document.getElementsByClassName("favoriteBtn");
       for (let i = 0; i < cardImages.length; i++) {
