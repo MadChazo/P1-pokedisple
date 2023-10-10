@@ -111,7 +111,7 @@ main {
 }
 
 #cards {
-  margin: 10px;
+  margin: 10px 10px 0px;
 }
 
 .pokeCard {
@@ -136,7 +136,7 @@ main {
 }
 
 .custCol {
-  height: 500px;
+  height: 700px;
 }
 
 /* End and footer section styling */
@@ -187,6 +187,11 @@ footer {
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+}
+
+#randImg img {
+  height:900px;
+
 }
 
 #randName {
