@@ -60,8 +60,7 @@ function getRandCard() {
   var maxPokeNum = 1017; // Highest national dex number as of 10-08-2023
   maxPokeNum += 1; // makes it possible for random to roll the max number
   maxPokeNum += 3; // for Easter eggs
-  var randomNumber = 1018
-  // Math.floor(Math.random() * maxPokeNum);
+  var randomNumber = Math.floor(Math.random() * maxPokeNum);
   if (randomNumber === maxPokeNum - 3) {
     jSecret();
   } else if (randomNumber === maxPokeNum - 2) {
