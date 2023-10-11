@@ -29,7 +29,7 @@ function jSecret() {
   loadText.setAttribute("style", "display:none");
   randName.textContent = "J Cabaluna";
   randImg.innerHTML =
-    "<img src='../assets/images/jCard.png' alt='Gatsbeau Pokémon card' />";
+    "<img src='./assets/images/jCard.png' alt='Gatsbeau Pokémon card' />";
   var dataGitHub = document.createElement("li");
   dataGitHub.innerHTML = "<a href='https://github.com/ChasingGatsby'>J on GitHub</a>";
   randData.appendChild(dataGitHub);
@@ -39,7 +39,7 @@ function mSecret() {
   loadText.setAttribute("style", "display:none");
   randName.textContent = "Madison Chazo";
   randImg.innerHTML =
-    "<img src='../assets/images/mCard.png' alt='MadChazo Pokémon card' />";
+    "<img src='./assets/images/mCard.png' alt='MadChazo Pokémon card' />";
   var dataGitHub = document.createElement("li");
   dataGitHub.innerHTML = "<a href='https://github.com/MadChazo'>Madison on GitHub</a>";
   randData.appendChild(dataGitHub);
@@ -48,7 +48,7 @@ function aSecret() {
   loadText.setAttribute("style", "display:none");
   randName.textContent = "Ava Jamora";
   randImg.innerHTML =
-    "<img src='../assets/images/aCard.jpg' alt='Butts Station Pokémon card' />";
+    "<img src='./assets/images/aCard.jpg' alt='Butts Station Pokémon card' />";
   var dataGitHub = document.createElement("li");
   dataGitHub.innerHTML = "<a href='https://github.com/afj511'>Ava on GitHub</a>";
   randData.appendChild(dataGitHub);
@@ -60,7 +60,8 @@ function getRandCard() {
   var maxPokeNum = 1017; // Highest national dex number as of 10-08-2023
   maxPokeNum += 1; // makes it possible for random to roll the max number
   maxPokeNum += 3; // for Easter eggs
-  var randomNumber = Math.floor(Math.random() * maxPokeNum);
+  var randomNumber = 1018
+  // Math.floor(Math.random() * maxPokeNum);
   if (randomNumber === maxPokeNum - 3) {
     jSecret();
   } else if (randomNumber === maxPokeNum - 2) {
